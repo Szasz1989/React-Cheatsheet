@@ -1,6 +1,6 @@
 # 📚 React & JS Cheatsheet
 
-###This is my cheatsheet for everything ![Untitled-1](https://user-images.githubusercontent.com/58719526/221365354-6d910d17-83a7-464f-836c-c3b5294a664c.png)
+This is my cheatsheet for everything ![Untitled-1](https://user-images.githubusercontent.com/58719526/221365354-6d910d17-83a7-464f-836c-c3b5294a664c.png)
 
 ## Table of content
 

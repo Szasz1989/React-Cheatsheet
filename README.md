@@ -263,15 +263,6 @@ const sum = numbers.reduce(function (accumulator, currentValue) {
 
 const sum2 = numbers.reduce((acc, cur) => acc + cur, 0);
 
-// Using a for loop
-const sum3 = () => {
-  let acc = 0;
-  for (const cur of numbers) {
-    acc += cur;
-  }
-  return acc;
-};
-
 const cart = [
   { id: 1, name: 'Product 1', price: 130 },
   { id: 2, name: 'Product 2', price: 150 },

@@ -147,7 +147,8 @@ import {FaGithub} from 'react-icons/fa'
   
 ## High Order Array Methods and when to use them
   * When to use forEach?<br>
-  .forEach() is great you need to execute a function for each individual element in an array. Good practice is that you should use .forEach() when you can’t use other array methods to accomplish your goal. I know this may sound vague, but .forEach() is a generic tool… only use it when you can’t use a more specialized tool.
+  
+.forEach() is great you need to execute a function for each individual element in an array. Good practice is that you should use .forEach() when you can’t use other array methods to accomplish your goal. I know this may sound vague, but .forEach() is a generic tool… only use it when you can’t use a more specialized tool.
   
   ```javascript
   const socialObjs = [
@@ -165,7 +166,8 @@ socialObjs.forEach((item) => console.log(item.url));
   ```
   
   * When to use map?<br>
-  .map() when you want to transform elements in an array.
+  
+.map() when you want to transform elements in an array.
   
   ```javascript
   const companies = [
@@ -220,7 +222,8 @@ console.log(evenDouble);
   ```
   
   * When to use filter?<br>
-  .filter() when you want to select a subset of multiple elements from an array.
+  
+ .filter() when you want to select a subset of multiple elements from an array.
   
   ```javascript
   const numbers = [1,2,3,4,5,6,7,8,9,10];
@@ -252,7 +255,8 @@ console.log(longCompanies);
   ```
   
    * When to use reduce?<br>
-  .reduce() when you want derive a single value from multiple elements in an array.
+  
+ .reduce() when you want derive a single value from multiple elements in an array.
   
   ```javascript
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -275,7 +279,8 @@ console.log(total);
   ```
   
    * When to use find?<br>
-  .find() When you want to select a single element from an array.
+  
+.find() When you want to select a single element from an array.
   ```javascript
   const array1 = [5, 12, 8, 130, 44];
 

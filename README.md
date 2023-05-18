@@ -1,4 +1,4 @@
-# 📚 React Cheatsheet
+# 📚 React & JS Cheatsheet
 
 This is my cheatsheet for everything ![Untitled-1](https://user-images.githubusercontent.com/58719526/221365354-6d910d17-83a7-464f-836c-c3b5294a664c.png)
 
@@ -143,3 +143,34 @@ import {FaGithub} from 'react-icons/fa'
 
 <FaGithub />
 ```
+  
+## High Order Array Methods and when to use them
+  * When to use forEach?
+  .forEach() is great you need to execute a function for each individual element in an array. Good practice is that you should use .forEach() when you can’t use other array methods to accomplish your goal. I know this may sound vague, but .forEach() is a generic tool… only use it when you can’t use a more specialized tool.
+  
+  ```javascript
+  const socialObjs = [
+    { name: 'Twitter', url: 'https://twitter.com'},
+    { name: 'Facebook', url: 'https://Facebook.com'},
+    { name: 'LinkedIn', url: 'https://LinkedIn.com'},
+    { name: 'Instagram', url: 'https://Instagram.com'},
+];
+
+socialObjs.forEach((item) => console.log(item.url));
+  
+  const socials = ['Twitter', 'LinkedIn', 'Facebook', 'Instagram'];
+  
+  socials.forEach((social, index, array) => console.log(`${index} - ${social}`, array));
+  ```
+  
+  * When to use map?
+  .map() when you want to transform elements in an array.
+  
+  * When to use filter?
+  .filter() when you want to select a subset of multiple elements from an array.
+  
+   * When to use reduce?
+  .reduce() when you want derive a single value from multiple elements in an array.
+  
+   * When to use find?
+  .find() When you want to select a single element from an array.

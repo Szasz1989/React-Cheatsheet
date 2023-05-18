@@ -167,11 +167,129 @@ socialObjs.forEach((item) => console.log(item.url));
   * When to use map?
   .map() when you want to transform elements in an array.
   
+  ```javascript
+  const companies = [
+  { name: 'Company One', category: 'Finance', start: 1981, end: 2004 },
+  { name: 'Company Two', category: 'Retail', start: 1982, end: 2005 },
+  { name: 'Company Three', category: 'Auto', start: 1983, end: 2006 },
+  { name: 'Company Four', category: 'Retail', start: 1984, end: 2007 },
+  { name: 'Company Five', category: 'Technology', start: 1985, end: 2008 },
+  { name: 'Company Six', category: 'Finance', start: 1986, end: 2009 },
+  { name: 'Company Seven', category: 'Auto', start: 1987, end: 2010 },
+  { name: 'Company Eight', category: 'Technology', start: 1988, end: 2011 },
+  { name: 'Company Nine', category: 'Retail', start: 1989, end: 2012 },
+];
+
+// Create an array of company names
+const companyNames = companies.map((company) => company.name);
+console.log(companyNames);
+
+// Create an array with just company and category
+const companyInfo = companies.map((company) => {
+  return {
+    name: company.name,
+    category: company.category,
+  };
+});
+
+console.log(companyInfo);
+
+// Create an array of objects with the name and the length of each company in years
+const companyYears = companies.map((company) => {
+  return {
+    name: company.name,
+    length: company.end - company.start + ' years',
+  };
+});
+
+console.log(companyYears);
+
+// Chain map methods
+const squareAndDouble = numbers
+  .map((number) => Math.sqrt(number))
+  .map((sqrt) => sqrt * 2);
+
+console.log(squareAndDouble);
+
+// Chaining different methods
+const evenDouble = numbers
+  .filter((number) => number % 2 === 0)
+  .map((number) => number * 2);
+
+console.log(evenDouble);
+  ```
+  
   * When to use filter?
   .filter() when you want to select a subset of multiple elements from an array.
+  
+  ```javascript
+  const numbers = [1,2,3,4,5,6,7,8,9,10];
+
+  const evenNumbers = numbers.filter(number => number % 2 === 0);
+  
+  const companies = [
+    {name: 'Company One', category: 'Finance', start: 1981, end: 2004},
+    {name: 'Company Two', category: 'Retail', start: 1982, end: 2005},
+    {name: 'Company Three', category: 'Auto', start: 1983, end: 2006},
+    {name: 'Company Four', category: 'Retail', start: 1984, end: 2007},
+    {name: 'Company Five', category: 'Technology', start: 1985, end: 2008},
+    {name: 'Company Six', category: 'Finance', start: 1986, end: 2009},
+    {name: 'Company Seven', category: 'Auto', start: 1987, end: 2010},
+    {name: 'Company Eight', category: 'Technology', start: 1988, end: 2011},
+    {name: 'Company Nine', category: 'Retail', start: 1989, end: 2012},
+];
+
+// Get only retail companies
+const retailCompanies = companies.filter(company => company.category == 'Retail');
+
+// Get companies that started in or after 1980 in or before 2005
+const earlyCompanies = companies.filter(company => company.start >= 1980 && company.end <= 2005);
+
+// Get companies that lasted 10 years or more
+const longCompanies = companies.filter(company => (company.end - company.start >= 10));
+
+console.log(longCompanies);
+  ```
   
    * When to use reduce?
   .reduce() when you want derive a single value from multiple elements in an array.
   
+  ```javascript
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const sum = numbers.reduce(function (accumulator, currentValue) {
+  return accumulator + currentValue;
+}, 0);
+
+const sum2 = numbers.reduce((acc, cur) => acc + cur, 0);
+
+// Using a for loop
+const sum3 = () => {
+  let acc = 0;
+  for (const cur of numbers) {
+    acc += cur;
+  }
+  return acc;
+};
+
+const cart = [
+  { id: 1, name: 'Product 1', price: 130 },
+  { id: 2, name: 'Product 2', price: 150 },
+  { id: 3, name: 'Product 3', price: 200 },
+];
+
+const total = cart.reduce((acc, product) => acc + product.price, 0);
+
+console.log(total);
+  ```
+  
    * When to use find?
   .find() When you want to select a single element from an array.
+  ```javascript
+  const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find(element => element > 10);
+
+console.log(found);
+// Expected output: 12
+  ```

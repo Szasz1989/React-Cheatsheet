@@ -7,6 +7,7 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 [Setting up React](#setting-up-react)<br>
 [Creating components](#creating-components)<br>
 [Proptypes and Props](#proptypes-and-props)<br>
+[useState hook](#usestate-hook)<br>
 [Routers](#routers)<br>
 [Link component](#link-component)<br>
 [Use React Icons](#use-react-icons)<br>

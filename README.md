@@ -52,8 +52,6 @@ Components in React are building blocks for creating user interfaces. They are t
 * With the command rfce create the basic structure of the file
 
 ```javascript
-import React from 'react'
-
 function Navbar() {
   return (
     <div>
@@ -374,8 +372,6 @@ In order to use these snippets you need to add the Visual Code Extansion called 
   
 // Functional React Component with Export //
   rfce
-  
-  import React from 'react'
 
   function $1() {
     return <div>$0</div>

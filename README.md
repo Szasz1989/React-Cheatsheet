@@ -12,6 +12,7 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 [Use React Icons](#use-react-icons)<br>
 [High Order Array Methods and when to use them](#high-order-array-methods-and-when-to-use-them)<br>
 [Ternary operator and && operator](#ternary-operator-and--operator)<br>
+[Usefull shorhands or snippets](#usefull-shorhands-or-snippets)<br>
 
 
 ## Setting up React
@@ -325,3 +326,25 @@ The conditional (ternary) operator is the only JavaScript operator that takes th
   
   In this example we will show the comments in li elements if showComments is true
   
+  
+  ## Usefull shorhands or snippets
+  
+In order to use these snippets you need to add the Visual Code Extansion called "ES7 React/Redux/GraphQL/React-Native snippets"
+  
+  ```javascript
+<!--  Console log  -->
+  clg 
+  
+  console.log(object)
+  
+<!--  Functional React Component with Export  -->
+  rfce
+  
+  import React from 'react'
+
+function $1() {
+  return <div>$0</div>
+}
+
+export default $1
+  ```

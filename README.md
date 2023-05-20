@@ -51,6 +51,41 @@ Components in React are building blocks for creating user interfaces. They are t
 * Create a component for example: Navbar.jsx (.tsx for typescript)
 * With the command rfce create the basic structure of the file
 
+```javascript
+import React from 'react'
+
+function Navbar() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default Navbar
+```
+
+* Then you need to import that to the main js file in this case App.js and place it in the App with:  <Navbar />
+
+
+```javascript
+import Navbar from './components/Navbar';
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <div className="container">
+        <h1>My App</h1>
+      </div>
+    </>
+  );
+}
+
+export default App;
+```
+
+
 ## Proptypes
 
 Proptypes allow you to specify which props a component can expect, as well as their type. For example:

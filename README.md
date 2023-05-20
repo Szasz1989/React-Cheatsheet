@@ -11,7 +11,7 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 [Link component](#link-component)<br>
 [Use React Icons](#use-react-icons)<br>
 [High Order Array Methods and when to use them](#high-order-array-methods-and-when-to-use-them)<br>
-[Ternary operator and && operator](#ternary-operator-and-&&-operator)<br>
+[Ternary operator and && operator](#ternary-operator-and--operator)<br>
 
 
 ## Setting up React

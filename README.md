@@ -289,3 +289,38 @@ const found = array1.find(element => element > 10);
 console.log(found);
 // Expected output: 12
   ```
+
+  ## Ternary operator and && operator
+  
+The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy. This operator is frequently used as an alternative to an if...else statement.
+  
+  * Ternary operator
+
+  ```javascript
+  {showComments 
+    ? (
+    <ul>
+       {comments.map((comment, index) => (
+           <li key={index}>{comment.text}</li>
+         ))}
+     </ul>
+     : null
+  )}
+  ```
+  
+  In this example we will show the comments in li elements if showComments is true, if false we will return null
+  
+  * && operator (If there is no need for else)
+  
+  ```javascript
+  {showComments && (
+    <ul>
+       {comments.map((comment, index) => (
+           <li key={index}>{comment.text}</li>
+         ))}
+     </ul>
+  )}
+  ```
+  
+  In this example we will show the comments in li elements if showComments is true
+  

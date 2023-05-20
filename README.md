@@ -332,19 +332,19 @@ The conditional (ternary) operator is the only JavaScript operator that takes th
 In order to use these snippets you need to add the Visual Code Extansion called "ES7 React/Redux/GraphQL/React-Native snippets"
   
   ```javascript
-<!--  Console log  -->
+// Console log //
   clg 
   
   console.log(object)
   
-<!--  Functional React Component with Export  -->
+// Functional React Component with Export //
   rfce
   
   import React from 'react'
 
-function $1() {
-  return <div>$0</div>
-}
+  function $1() {
+    return <div>$0</div>
+  }
 
-export default $1
+  export default $1
   ```

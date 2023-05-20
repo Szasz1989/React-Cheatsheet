@@ -6,7 +6,7 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 
 [Setting up React](#setting-up-react)<br>
 [Creating components](#creating-components)<br>
-[Proptypes](#proptypes)<br>
+[Proptypes and Props](#proptypes-and-props)<br>
 [Routers](#routers)<br>
 [Link component](#link-component)<br>
 [Use React Icons](#use-react-icons)<br>
@@ -84,7 +84,7 @@ export default App;
 ```
 
 
-## Proptypes
+## Proptypes and Props
 
 Proptypes allow you to specify which props a component can expect, as well as their type. For example:
 
@@ -108,6 +108,51 @@ Navbar.defaultProps = {
 Navbar.propTypes = {
     title: PropTypes.string,
 }
+```
+
+Props (short for properties) are a way to pass data from a parent component to its child components. They are used to customize and configure the child components. Props are essentially read-only, meaning that they cannot be modified by the child components. Props are essential for building reusable and modular components in React. By passing different props to a component, you can create variations of the same component with different behaviors or appearances. This allows for flexible and dynamic UI development.
+
+```javascript
+// Parent component
+import Header from './components/Header';
+
+function App() {
+  return (
+    <>
+      <Header />
+      <div className="container">
+        <h1>My App</h1>
+      </div>
+    </>
+  );
+}
+
+export default App;
+```
+
+```javascript
+// Child component
+import PropTypes from 'prop-types';
+
+function Header({ text }) {
+  return (
+    <header>
+      <div className="container">
+        <h2>{text}</h2>
+      </div>
+    </header>
+  );
+}
+
+Header.defaultProps = {
+  text: 'Feedback UI',
+};
+
+Header.propTypes = {
+  text: PropTypes.string,
+};
+
+export default Header;
 ```
 
 ## Routers
@@ -378,4 +423,12 @@ In order to use these snippets you need to add the Visual Code Extansion called 
   }
 
   export default $1
+  
+// Import PropTypes //
+  impt
+  
+  import PropTypes from 'prop-types';
   ```
+ 
+  
+  

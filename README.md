@@ -155,13 +155,36 @@ Header.propTypes = {
 export default Header;
 ```
 
+## useState hook
+
+The useState hook provides a convenient and efficient way to manage state in functional components, ensuring that the component's UI reflects the current state and handling the re-rendering process efficiently. The main difference between using the useState hook and storing information in regular variables is how React handles the component's state and triggers re-rendering.
+
+```javascript
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+};
+
+export default Counter;
+```
+
 ## Routers
 
 React routers are used to create single page applications with navigation without the page reloading, allowing developers to create more seamless user experiences.
 
 * Install React Router and React Icons
 
-```
+```javascript
 npm i react-router-dom react-icons
 ```
 

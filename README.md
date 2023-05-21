@@ -10,6 +10,7 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 [Hooks](#hooks)<br>
 [Routers](#routers)<br>
 [Link component](#link-component)<br>
+[Navigate component](#navigate-component)<br>
 [Use React Icons](#use-react-icons)<br>
 [High Order Array Methods and when to use them](#high-order-array-methods-and-when-to-use-them)<br>
 [Ternary operator and && operator](#ternary-operator-and--operator)<br>
@@ -272,7 +273,7 @@ The <Navigate> component can be used to redirect anywhere
 
 import { Navigate } from "react-router-dom";
   
-<Navigate to="/notfound>
+<Navigate to="/notfound">
 ```
               
 ## Use React Icons

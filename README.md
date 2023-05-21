@@ -250,6 +250,34 @@ function Component5() {
   );
 }
 ```
+  
+* useEffect Hook
+  
+The useEffect hook in React is used to perform side effects in functional components. Side effects can include fetching data, subscribing to events, or manually manipulating the DOM.
+useEffect takes two arguments: a function and a dependency array. The function specified in useEffect will be executed after every render of the component.
+The dependency array is an optional second argument. It allows you to specify dependencies that the effect relies on. If any of the dependencies change between renders, the effect function will be executed again. If the dependency array is omitted, the effect will run after every render.
+ 
+1. No dependency passed:
+```javascript
+useEffect(() => {
+  //Runs on every render
+}); 
+```
+  
+2. An empty array:
+```javascript
+useEffect(() => {
+  //Runs only on the first render
+}, []);
+```
+  
+3. Props or state values:
+```javascript
+useEffect(() => {
+  //Runs on the first render
+  //And any time any dependency value changes
+}, [prop, state]);
+```
 
 ## Routers
 

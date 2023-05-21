@@ -182,6 +182,7 @@ export default Counter;
 ```
 
 * useParams Hook
+
 The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
   
  ```javascript
@@ -205,6 +206,47 @@ function App() {
 }
  ```
   
+* useContext Hook
+  
+React Context is a way to manage state globally.
+It can be used together with the useState Hook to share state between deeply nested components more easily than with useState alone.
+
+To create context, you must Import createContext and initialize it:
+```javascript
+import { useState, createContext } from "react";
+
+const UserContext = createContext() 
+```
+  
+Wrap child components in the Context Provider and supply the state value.
+```javascript
+function Component1() {
+  const [user, setUser] = useState("Jesse Hall");
+
+  return (
+    <UserContext.Provider value={user}>
+      <h1>{`Hello ${user}!`}</h1>
+      <Component2 user={user} />
+    </UserContext.Provider>
+  );
+}
+```
+  
+In order to use the Context in a child component, we need to access it using the useContext Hook.
+First, include the useContext in the import statement, then you can access the user Context in all components:
+
+```javascript
+function Component5() {
+  const user = useContext(UserContext);
+
+  return (
+    <>
+      <h1>Component 5</h1>
+      <h2>{`Hello ${user} again!`}</h2>
+    </>
+  );
+}
+```
 
 ## Routers
 

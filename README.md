@@ -7,7 +7,7 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 [Setting up React](#setting-up-react)<br>
 [Creating components](#creating-components)<br>
 [Proptypes and Props](#proptypes-and-props)<br>
-[useState hook](#usestate-hook)<br>
+[Hooks](#hooks)<br>
 [Routers](#routers)<br>
 [Link component](#link-component)<br>
 [Use React Icons](#use-react-icons)<br>
@@ -156,8 +156,9 @@ Header.propTypes = {
 export default Header;
 ```
 
-## useState hook
+## Hooks
 
+* useState Hook
 The useState hook provides a convenient and efficient way to manage state in functional components, ensuring that the component's UI reflects the current state and handling the re-rendering process efficiently. The main difference between using the useState hook and storing information in regular variables is how React handles the component's state and triggers re-rendering.
 
 ```javascript
@@ -178,6 +179,31 @@ const Counter = () => {
 
 export default Counter;
 ```
+
+* useParams Hook
+The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
+  
+ ```javascript
+ import { Routes, Route, useParams } from 'react-router-dom';
+
+function ProfilePage() {
+  // Get the userId param from the URL.
+  let { userId } = useParams();
+  // ...
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="users">
+        <Route path=":userId" element={<ProfilePage />} />
+        <Route path="me" element={...} />
+      </Route>
+    </Routes>
+  );
+}
+ ```
+  
 
 ## Routers
 
@@ -238,7 +264,17 @@ import { Link } from 'react-router-dom'
 <Link to='/about'>About</Link>
 ```
   
+## Navigate component
+ 
+The <Navigate> component can be used to redirect anywhere
 
+```javascript
+
+import { Navigate } from "react-router-dom";
+  
+<Navigate to="/notfound>
+```
+              
 ## Use React Icons
 
 * Import it first to the component you want to use it then use it like this:

@@ -237,6 +237,8 @@ In order to use the Context in a child component, we need to access it using the
 First, include the useContext in the import statement, then you can access the user Context in all components:
 
 ```javascript
+import { useState, createContext, useContext } from "react";  
+
 function Component5() {
   const user = useContext(UserContext);
 

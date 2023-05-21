@@ -159,7 +159,8 @@ export default Header;
 
 ## Hooks
 
-* useState Hook
+* useState Hook<br>
+
 The useState hook provides a convenient and efficient way to manage state in functional components, ensuring that the component's UI reflects the current state and handling the re-rendering process efficiently. The main difference between using the useState hook and storing information in regular variables is how React handles the component's state and triggers re-rendering.
 
 ```javascript

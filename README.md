@@ -28,7 +28,7 @@ npx create-react-app [projects-name] --use-npm
 
 cd [project-name]
 
-// Open project name in Visual code
+// Open project in Visual code
 
 code .
 ```

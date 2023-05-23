@@ -22,7 +22,7 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 * Create new project (Add the code below to a command terminal)
 
 ```
-npx create-rect-app [projects-name] --use-npm
+npx create-react-app [projects-name] --use-npm
 ```
 
 

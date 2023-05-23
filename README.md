@@ -23,6 +23,14 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 
 ```
 npx create-react-app [projects-name] --use-npm
+
+// Optional: //
+
+cd [project-name]
+
+// Open project name in Visual code
+
+code .
 ```
 
 

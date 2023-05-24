@@ -11,6 +11,7 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 [Routers](#routers)<br>
 [Link component](#link-component)<br>
 [Navigate component](#navigate-component)<br>
+[Reducers](#reducers)<br>
 [Use React Icons](#use-react-icons)<br>
 [High Order Array Methods and when to use them](#high-order-array-methods-and-when-to-use-them)<br>
 [Ternary operator and && operator](#ternary-operator-and--operator)<br>
@@ -355,6 +356,50 @@ The <Navigate> component can be used to redirect anywhere
 import { Navigate } from "react-router-dom";
   
 <Navigate to="/notfound">
+```
+
+## Reducers
+  
+Basically reducers are there to manage state in an application. For instance, if a user writes something in an HTML input field, the application has to manage this UI state (e.g. controlled components). -- Helpfull link: https://www.robinwieruch.de/javascript-reducer/ --
+In essence, a reducer is a function which takes two arguments -- the current state and an action -- and returns based on both arguments a new state. In a pseudo function it could be expressed as:
+  
+```javascript
+const counterReducer = (state, action) => {
+  return state + 1;
+};
+```
+  
+The action is normally defined as an object with a type property. Based on the type of the action, the reducer can perform conditional state transitions:
+  
+```javascript
+const counterReducer = (count, action) => {
+  if (action.type === 'INCREASE') {
+    return count + 1;
+  }
+
+  if (action.type === 'DECREASE') {
+    return count - 1;
+  }
+
+  return count;
+};
+```
+  
+If the action type doesn't match any condition, we return the unchanged state.
+
+The following reducer performs the same logic as before but expressed with a switch case statement:
+
+```javascript
+const counterReducer = (count, action) => {
+  switch (action.type) {
+    case 'INCREASE':
+      return count + 1;
+    case 'DECREASE':
+      return count - 1;
+    default:
+      return count;
+  }
+};
 ```
               
 ## Use React Icons

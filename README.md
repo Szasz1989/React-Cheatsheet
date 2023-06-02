@@ -8,6 +8,7 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 [Creating components](#creating-components)<br>
 [Proptypes and Props](#proptypes-and-props)<br>
 [Hooks](#hooks)<br>
+[Create custom hooks](#create-custom-hooks)<br>
 [Routers](#routers)<br>
 [Link component](#link-component)<br>
 [Navigate component](#navigate-component)<br>
@@ -288,6 +289,78 @@ useEffect(() => {
 }, [prop, state]);
 ```
 
+##Create custom hooks
+  
+In this example a custom hook called useFetch will be created.
+  
+  * First we create a folder called hooks in the src folder
+  * Then we create the hook file, in this case useFetch.js
+  * The hook's code will look like this:
+  
+  ```javascript
+import { useState, useEffect } from 'react';
+
+function useFetch(url, options) {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+
+        setData(data);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return { data, loading, error };
+}
+
+export default useFetch;
+
+```
+  
+  * And we can use it like this (In the example we use the hook in a component called CustomHookExample1.jsx):
+  
+  ```javascript
+// First we need to call the hook
+import useFetch from '../hooks/useFetch';
+
+function CustomHookExample1() {
+  // We create a variable and destructure data, loading and error from the data we fetch with the useFetch hook (With the url and options)
+  const { data, loading, error } = useFetch(
+    'https://jsonplaceholder.typicode.com/posts',
+    {}
+  );
+
+  // We check if loading
+  if (loading) {
+    return <h3>Loading...</h3>;
+  }
+
+  return (
+    <div>
+      {/* We map trough the data and display the titles */}
+      {data.map((post) => (
+        <h3 key={post.id}>{post.title}</h3>
+      ))}
+    </div>
+  );
+}
+
+export default CustomHookExample1;
+```
+  
 ## Routers
 
 React routers are used to create single page applications with navigation without the page reloading, allowing developers to create more seamless user experiences.

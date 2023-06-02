@@ -8,7 +8,7 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 [Creating components](#creating-components)<br>
 [Proptypes and Props](#proptypes-and-props)<br>
 [Hooks](#hooks)<br>
-[Create custom hooks](#create-custom-hooks)<br>
+[Create Custom Hooks](#create-custom-hooks)<br>
 [Routers](#routers)<br>
 [Link component](#link-component)<br>
 [Navigate component](#navigate-component)<br>
@@ -289,7 +289,7 @@ useEffect(() => {
 }, [prop, state]);
 ```
 
-##Create custom hooks
+##Create Custom Hooks
   
 In this example a custom hook called useFetch will be created.
   

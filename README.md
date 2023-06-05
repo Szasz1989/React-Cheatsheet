@@ -7,6 +7,7 @@ This is my cheatsheet for everything ![Untitled-1](https://user-images.githubuse
 [Setting up React](#setting-up-react)<br>
 [Creating components](#creating-components)<br>
 [Proptypes and Props](#proptypes-and-props)<br>
+[Import SVG](#import-svg)<br>
 [Hooks](#hooks)<br>
 [Create Custom Hooks](#create-custom-hooks)<br>
 [Routers](#routers)<br>
@@ -165,6 +166,26 @@ Header.propTypes = {
 };
 
 export default Header;
+```
+
+## Import SVG
+
+There are two ways to import SVG images in React:
+
+* You can import the SVG file as a component in case if you want to manipulate it
+
+```javascript
+import {ReactComponent as ArrowRightIcon} from '../assets/svg/keyboardArrowRightIcon.svg'; 
+
+<ArrowRightIcon fill='#ffffff' width='34px' height='34px' />
+```
+
+* You can import it as a regular image file, but in this case you can't manipulate the SVG image
+
+```javascript
+import visibilityIcon from '../assets/svg/visibilityIcon.svg'
+
+<img src={visibilityIcon} alt="show password" />
 ```
 
 ## Hooks

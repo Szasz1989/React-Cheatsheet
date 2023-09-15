@@ -237,6 +237,27 @@ function App() {
   );
 }
  ```
+
+```javascript
+ import { useParams } from 'react-router-dom';
+
+function Post() {
+  // Initialise useParams
+  const params = useParams()
+
+  return (
+    <div>
+      // It can be used for multiple params as well
+      <h1>Post {params.id}</h1>
+      <p>Name: {params.name}</p>
+    </div>
+  )
+}
+
+// The Route in the other component
+<Route path='/post/:id/:name' element={<Post />} />
+
+ ```
   
 * useContext Hook
   
